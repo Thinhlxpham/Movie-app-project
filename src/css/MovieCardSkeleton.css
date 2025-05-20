@@ -1,0 +1,76 @@
+.movie_card_list-skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Skeleton Card */
+.movie_list-skeleton {
+  background-color: #e0e0e0;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 300px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Skeleton Image Placeholder */
+.img-load-skeleton {
+  width: 100%;
+  height: 200px;
+  background-color: #c0c0c0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Skeleton Title Placeholder */
+.title-loading-skeleton {
+  width: 80%;
+  height: 20px;
+  background-color: #c0c0c0;
+  border-radius: 4px;
+  margin: 0 auto 5px auto;
+  display: block;
+}
+
+/* Skeleton Release */
+.detail-list-skeleton {
+  width: 60%;
+  height: 15px;
+  background-color: #c0c0c0;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.movie_list-skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 0.5s infinite linear;
+}
