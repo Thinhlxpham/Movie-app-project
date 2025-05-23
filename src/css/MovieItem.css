@@ -1,0 +1,28 @@
+.container-item {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+img {
+  border-radius: 10px;
+  border: none;
+}
+.detail-right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+button {
+  padding: 5px 10px;
+  background-color: rgb(120, 40, 26);
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: tomato;
+  font-weight: 700;
+}

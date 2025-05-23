@@ -8,7 +8,7 @@ function CartList({ image, text, id, release }) {
         <img src={image} alt="" />
         <h4 className="title">{text}</h4>
         <span>{release}</span>
-        <Link to={`/search/${id}`}>
+        <Link to={`/movie/${id}`}>
           <button className="movie__button">Find Out More</button>
         </Link>
       </div>
